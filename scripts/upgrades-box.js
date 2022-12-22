@@ -16,7 +16,7 @@ async function main() {
     await upgradeTx.wait(1)
 
     const proxyBoxV2 = await ethers.getContractAt("BoxV2", transparentProxy.address) //we ger boxv2 abi and load it to transp
-    //this way ether knows we are call our func on tranp address and proxy box gona have abi of boxv2
+    //this way ether knows we are call our func on tranp address and proxy box gona have abi of boxv2.
     const versionV2 = await proxyBoxV2.version()
     console.log(versionV2)
 }
